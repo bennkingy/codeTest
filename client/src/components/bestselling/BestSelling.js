@@ -157,18 +157,27 @@ export default function BestSelling() {
           <Container>
             { holidayData.items.map((i) => (
               <Card key={nanoid()}>
-                <CardImg src={i.image.file.url} alt={i.image.title} />
+                <CardImg 
+                  src={i.image.file.url}
+                  alt={i.image.title}
+                />
                 <CardLocation>{i.parent_location}</CardLocation>
                 <CardSection>
                   <CardTitle>{i.full_name}</CardTitle>
                   <CardStarRating>
                     { new Array(i.data[0].venue_information.official_star_rating).fill().map(() => (
-                      <span key={nanoid()}><FontAwesomeIcon icon={faStar}/></span>
+                      <span key={nanoid()}>
+                        <FontAwesomeIcon icon={faStar}/>
+                      </span>
                     ))}
                   </CardStarRating>
                 </CardSection>
                 <CardDivider/>
-                { i.lead_product.badge ? <Badge width={50} style={{float: "right"}}/> : '' }
+                { i.lead_product.badge ? 
+                  <Badge 
+                    width={50}
+                    style={{float: "right"}}
+                  /> : '' }
                 <CardDesc>{i.lead_product.nights} night & {i.lead_product.rounds} rounds</CardDesc>
                 <CardFrom>from</CardFrom>
                 <CardPrice>£{i.lead_product.price}<PriceSuffix>pp</PriceSuffix></CardPrice>
