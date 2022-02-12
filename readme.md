@@ -10,6 +10,11 @@ Developer test.
 4. npm i
 5. npm run dev
 
+## Pages
+
+- http://localhost:3000/
+- http://localhost:5000/api-docs
+
 ## Technoloigies used
 
 - React
