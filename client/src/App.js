@@ -1,11 +1,11 @@
 import React from 'react'
-import Widget from './components/widget/Widget'
+import BestSelling from './components/bestselling/BestSelling'
 
 function App() {
 
   return (
     <>
-      <Widget />
+      <BestSelling />
     </>
   )
 

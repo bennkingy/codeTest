@@ -16,7 +16,7 @@
 					"data": [
 						{
 							"venue_type": "Resort",
-							"venue_information": { "official_star_rating": 4 }
+							"venue_information": { "official_star_rating": 3 }
 						}
 					],
 					"image": {
@@ -62,7 +62,7 @@
 					"data": [
 						{
 							"venue_type": "Resort",
-							"venue_information": { "official_star_rating": 4 }
+							"venue_information": { "official_star_rating": 5 }
 						}
 					],
 					"image": {
@@ -108,7 +108,7 @@
 						"rounds": 2,
 						"nights": 1,
 						"price": 99,
-						"badge": "book_online.svg"
+						"badge": ""
 					},
 					"data": [
 						{
