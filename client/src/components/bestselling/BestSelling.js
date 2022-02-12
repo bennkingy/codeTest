@@ -8,8 +8,8 @@ import { ReactComponent as Badge } from '../../images/Badge_Bookonline.svg'
 
 // Styling
 
-const grey = 'rgb(45, 55, 72)';
-const openSans = '"Open Sans", sans-serif;';
+const primaryColour = 'rgb(45, 55, 72)';
+const primaryFont = '"Open Sans", sans-serif;';
 
 export const H1 = styled.h1`
   font-family: 'Nunito Sans', sans-serif;
@@ -44,7 +44,7 @@ export const CardLocation = styled.span`
   margin-left: 0;
   font-size: 12px;
   font-weight: 600;
-  font-family: ${openSans};
+  font-family: ${primaryFont};
   width: auto;
   margin-bottom: 10px;
   display: block;
@@ -82,7 +82,7 @@ export const CardImg = styled.img`
   margin-bottom: 15px;
 `
 export const CardTitle = styled.h3`
-  font-family: ${openSans};
+  font-family: ${primaryFont};
   color: #2d3748;
   font-weight: 700;
   margin: 0;
@@ -91,8 +91,8 @@ export const CardTitle = styled.h3`
   margin-bottom: 10px;
 `
 export const CardPrice = styled.span`
-  color: ${grey};
-  font-family: ${openSans};
+  color: ${primaryColour};
+  font-family: ${primaryFont};
   font-size: 28px;
   font-weight: 600;
   letter-spacing -1px;
@@ -100,23 +100,23 @@ export const CardPrice = styled.span`
   word-break: normal;
 `
 export const PriceSuffix = styled.span`
-  color: ${grey};
-  font-family: ${openSans};
+  color: ${primaryColour};
+  font-family: ${primaryFont};
   font-size: 14px;
   font-weight: 400;
   letter-spacing: normal;
   padding-left: 1px;
 `
 export const CardFrom = styled.span`
-  color: ${grey};
+  color: ${primaryColour};
   font-size: 10px;
   display: block;
-  font-family: ${openSans};
+  font-family: ${primaryFont};
   margin-bottom: 5px;
 `
 export const CardDesc = styled.p`
-  color: ${grey};
-  font-family: ${openSans};
+  color: ${primaryColour};
+  font-family: ${primaryFont};
   font-size: 14px;
   line-height: 22.4px;
   display: block;
