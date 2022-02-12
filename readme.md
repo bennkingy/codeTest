@@ -1,6 +1,6 @@
 # Golfbreaks test
 
-Creating a react component for web developer code test.
+Developer test.
 
 ## To run the project
 
