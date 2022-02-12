@@ -7,7 +7,7 @@ const swaggerUI = require('swagger-ui-express')
 const swaggerOptions = {
   swaggerDefinition: {
     info: {
-      title: "Demo API",
+      title: "Holidays API",
       version: '1.0.0',
     },
   },
@@ -21,7 +21,7 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 * @swagger
 * /api:
 *   get:
-*     description: Get all demo data
+*     description: Get all product data for holidays category
 *     responses:
 *       200:
 *         description: Success

@@ -40,6 +40,13 @@ export const Card = styled.div`
     color: #70d200
   }
 `
+export const CardImg = styled.img`
+  width: 100%;
+  border-radius: 3px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+`
 export const CardLocation = styled.span`
   color: #4a5568;
   margin-top: 4px;
@@ -51,6 +58,27 @@ export const CardLocation = styled.span`
   margin-bottom: 10px;
   display: block;
   text-transform: uppercase;
+`
+export const CardSection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+`
+export const CardTitle = styled.h3`
+  font-family: ${secondaryFont};
+  color: #2d3748;
+  font-weight: 700;
+  margin: 0;
+  display: inline;
+  margin-right: 5px;
+  margin-bottom: 10px;
+`
+export const CardStarRating = styled.div`
+  display: inline-block;
+  margin-bottom: 10px;
+  > span {
+    color: #ffc107;
+  }
 `
 export const CardDivider = styled.hr` 
   border-color: #e2e8f0 !important;
@@ -64,33 +92,20 @@ export const CardDivider = styled.hr`
   margin-top: 10px;
   margin-bottom: 15px;
 `
-export const CardStarRating = styled.div`
-  display: inline-block;
-  margin-bottom: 10px;
-  > span {
-    color: #ffc107;
-  }
-`
-export const CardSection = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-`
-export const CardImg = styled.img`
-  width: 100%;
-  border-radius: 3px;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 15px;
-`
-export const CardTitle = styled.h3`
+export const CardDesc = styled.p`
+  color: ${primaryColour};
   font-family: ${secondaryFont};
-  color: #2d3748;
-  font-weight: 700;
-  margin: 0;
-  display: inline;
-  margin-right: 5px;
+  font-size: 14px;
+  line-height: 22.4px;
+  display: block;
   margin-bottom: 10px;
+`
+export const CardFrom = styled.span`
+  color: ${primaryColour};
+  font-size: 10px;
+  display: block;
+  font-family: ${secondaryFont};
+  margin-bottom: 5px;
 `
 export const CardPrice = styled.span`
   color: ${primaryColour};
@@ -109,22 +124,6 @@ export const PriceSuffix = styled.span`
   letter-spacing: normal;
   padding-left: 1px;
 `
-export const CardFrom = styled.span`
-  color: ${primaryColour};
-  font-size: 10px;
-  display: block;
-  font-family: ${secondaryFont};
-  margin-bottom: 5px;
-`
-export const CardDesc = styled.p`
-  color: ${primaryColour};
-  font-family: ${secondaryFont};
-  font-size: 14px;
-  line-height: 22.4px;
-  display: block;
-  margin-bottom: 10px;
-`
-
 // APIs
 
 const getHolidays = () => { 
