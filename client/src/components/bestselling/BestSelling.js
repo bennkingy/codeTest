@@ -8,14 +8,14 @@ import { ReactComponent as Badge } from '../../images/Badge_Bookonline.svg'
 
 // Styling
 
-let grey ='rgb(45, 55, 72)';
+const grey = 'rgb(45, 55, 72)';
+const openSans = '"Open Sans", sans-serif;';
 
 export const H1 = styled.h1`
   font-family: 'Nunito Sans', sans-serif;
   font-size: 34px;
   font-weight: 300;
   color: #1a202c;
-  text-decoration-color: rgb(26, 32, 44);
   margin-left: 20px;
 `
 export const Container = styled.div`
@@ -38,8 +38,20 @@ export const Card = styled.div`
     color: #70d200
   }
 `
-export const Divider = styled.hr` 
-  border-color: #e2e8f0!important;
+export const CardLocation = styled.span`
+  color: #4a5568;
+  margin-top: 4px;
+  margin-left: 0;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: ${openSans};
+  width: auto;
+  margin-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+`
+export const CardDivider = styled.hr` 
+  border-color: #e2e8f0 !important;
   display: block;
   flex: 1 1 0px;
   max-width: 100%;
@@ -50,39 +62,27 @@ export const Divider = styled.hr`
   margin-top: 10px;
   margin-bottom: 15px;
 `
-export const StarRating = styled.div`
+export const CardStarRating = styled.div`
   display: inline-block;
   margin-bottom: 10px;
   > span   {
     color: #ffc107;
   }
 `
-export const Section = styled.div`
+export const CardSection = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 `
-export const Img = styled.img`
+export const CardImg = styled.img`
   width: 100%;
   border-radius: 3px;
   height: 200px;
   object-fit: cover;
   margin-bottom: 15px;
 `
-export const Location = styled.span`
-  color: #4a5568;
-  margin-top: 4px;
-  margin-left: 0;
-  font-size: 12px;
-  font-weight: 600;
-  font-family: Open Sans,sans-serif;
-  width: auto;
-  margin-bottom: 10px;
-  display: block;
-  text-transform: uppercase;
-`
 export const CardTitle = styled.h3`
-  font-family: Open Sans,sans-serif;
+  font-family: ${openSans};
   color: #2d3748;
   font-weight: 700;
   margin: 0;
@@ -90,34 +90,33 @@ export const CardTitle = styled.h3`
   margin-right: 5px;
   margin-bottom: 10px;
 `
-export const Price = styled.span`
+export const CardPrice = styled.span`
   color: ${grey};
-  font-family: "Open Sans", sans-serif;
+  font-family: ${openSans};
   font-size: 28px;
   font-weight: 600;
   letter-spacing -1px;
-  line-height: 25.6px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   word-break: normal;
 `
 export const PriceSuffix = styled.span`
   color: ${grey};
-  font-family: "Open Sans", sans-serif;
+  font-family: ${openSans};
   font-size: 14px;
   font-weight: 400;
   letter-spacing: normal;
   padding-left: 1px;
 `
-export const From = styled.span`
+export const CardFrom = styled.span`
   color: ${grey};
   font-size: 10px;
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: ${openSans};
   margin-bottom: 5px;
 `
-export const Desc = styled.span`
+export const CardDesc = styled.p`
   color: ${grey};
-  font-family: "Open Sans", sans-serif;
+  font-family: ${openSans};
   font-size: 14px;
   line-height: 22.4px;
   display: block;
@@ -152,29 +151,28 @@ export default function BestSelling() {
     <>
       { holidayData ? ( 
         <>
-        <H1>{holidayData.title}</H1>
+          <H1>{holidayData.title}</H1>
           <Container>
             { holidayData.items.map((i) => (
               <Card key={nanoid()}>
-                <Img src={i.image.file.url} alt={i.image.title} />
-                <Location>{i.parent_location}</Location>
-                <Section>
+                <CardImg src={i.image.file.url} alt={i.image.title} />
+                <CardLocation>{i.parent_location}</CardLocation>
+                <CardSection>
                   <CardTitle>{i.full_name}</CardTitle>
-                  <StarRating>
+                  <CardStarRating>
                     { new Array(i.data[0].venue_information.official_star_rating).fill().map(() => (
                       <span key={nanoid()}><FontAwesomeIcon icon={faStar}/></span>
                     ))}
-                  </StarRating>
-                </Section>
-                <Divider/>
+                  </CardStarRating>
+                </CardSection>
+                <CardDivider/>
                 { i.lead_product.badge ? <Badge width={50} style={{float: "right"}}/> : '' }
-                <Desc>{i.lead_product.nights} night & {i.lead_product.rounds} rounds</Desc>
-                <From>from</From>
-                <Price>£{i.lead_product.price}<PriceSuffix>pp</PriceSuffix></Price>
+                <CardDesc>{i.lead_product.nights} night & {i.lead_product.rounds} rounds</CardDesc>
+                <CardFrom>from</CardFrom>
+                <CardPrice>£{i.lead_product.price}<PriceSuffix>pp</PriceSuffix></CardPrice>
               </Card>
               ))
             }
-
           </Container>
         </>
       ) : <H1>Loading...</H1> }

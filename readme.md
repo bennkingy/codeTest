@@ -13,7 +13,8 @@ Developer test.
 ## Technoloigies used
 
 - React
-- Styled components
+- React Styled Components
+- FontAwesome
 - Axios
 - Express
 - Swagger
