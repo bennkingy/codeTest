@@ -1,6 +1,6 @@
 # Golfbreaks test
 
-Creating a react component for
+Creating a react component for web developer code test.
 
 ## To run the project
 
@@ -12,6 +12,7 @@ Creating a react component for
 
 ## Technoloigies used
 
+- React
 - Styled components
 - Axios
 - Express
