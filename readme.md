@@ -19,7 +19,7 @@ Developer test.
 
 - React
 - React Styled Components
-- FontAwesome
+- Font Awesome
 - Axios
 - Express
 - Swagger

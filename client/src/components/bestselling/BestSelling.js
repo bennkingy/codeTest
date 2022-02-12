@@ -9,10 +9,11 @@ import { ReactComponent as Badge } from '../../images/Badge_Bookonline.svg'
 // Styling
 
 const primaryColour = 'rgb(45, 55, 72)';
-const primaryFont = '"Open Sans", sans-serif;';
+const secondaryFont = '"Open Sans", sans-serif;';
+const primaryFont = '"Nunito Sans", sans-serif;';
 
 export const H1 = styled.h1`
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: ${primaryFont};
   font-size: 34px;
   font-weight: 300;
   color: #1a202c;
@@ -44,7 +45,7 @@ export const CardLocation = styled.span`
   margin-left: 0;
   font-size: 12px;
   font-weight: 600;
-  font-family: ${primaryFont};
+  font-family: ${secondaryFont};
   width: auto;
   margin-bottom: 10px;
   display: block;
@@ -65,7 +66,7 @@ export const CardDivider = styled.hr`
 export const CardStarRating = styled.div`
   display: inline-block;
   margin-bottom: 10px;
-  > span   {
+  > span {
     color: #ffc107;
   }
 `
@@ -82,7 +83,7 @@ export const CardImg = styled.img`
   margin-bottom: 15px;
 `
 export const CardTitle = styled.h3`
-  font-family: ${primaryFont};
+  font-family: ${secondaryFont};
   color: #2d3748;
   font-weight: 700;
   margin: 0;
@@ -92,7 +93,7 @@ export const CardTitle = styled.h3`
 `
 export const CardPrice = styled.span`
   color: ${primaryColour};
-  font-family: ${primaryFont};
+  font-family: ${secondaryFont};
   font-size: 28px;
   font-weight: 600;
   letter-spacing -1px;
@@ -101,7 +102,7 @@ export const CardPrice = styled.span`
 `
 export const PriceSuffix = styled.span`
   color: ${primaryColour};
-  font-family: ${primaryFont};
+  font-family: ${secondaryFont};
   font-size: 14px;
   font-weight: 400;
   letter-spacing: normal;
@@ -111,12 +112,12 @@ export const CardFrom = styled.span`
   color: ${primaryColour};
   font-size: 10px;
   display: block;
-  font-family: ${primaryFont};
+  font-family: ${secondaryFont};
   margin-bottom: 5px;
 `
 export const CardDesc = styled.p`
   color: ${primaryColour};
-  font-family: ${primaryFont};
+  font-family: ${secondaryFont};
   font-size: 14px;
   line-height: 22.4px;
   display: block;
