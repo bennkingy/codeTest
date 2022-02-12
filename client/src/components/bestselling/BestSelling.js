@@ -176,11 +176,12 @@ export default function BestSelling() {
                   <Badge 
                     width={50}
                     style={{float: "right"}}
-                  /> : '' }
+                  /> : '' 
+                }
                 <CardDesc>{i.lead_product.nights} night & {i.lead_product.rounds} rounds</CardDesc>
                 <CardFrom>from</CardFrom>
                 <CardPrice>£{i.lead_product.price}<PriceSuffix>pp</PriceSuffix></CardPrice>
-              </Card>
+              </Card> 
               ))
             }
           </Container>
