@@ -9,8 +9,9 @@ import { ReactComponent as Badge } from '../../images/Badge_Bookonline.svg'
 // Styling
 
 const primaryColour = 'rgb(45, 55, 72)';
-const secondaryFont = '"Open Sans", sans-serif;';
+
 const primaryFont = '"Nunito Sans", sans-serif;';
+const secondaryFont = '"Open Sans", sans-serif;';
 
 export const H1 = styled.h1`
   font-family: ${primaryFont};
